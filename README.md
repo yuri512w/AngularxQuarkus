@@ -1,6 +1,13 @@
+
+
 # AngularQuarkus
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+![image](https://github.com/yuri512w/AngularxQuarkus/assets/39866248/6493affc-859a-4219-90f6-3ab6590e6c8f)
+
+Usado Material;
+3 componentes com SPA;
+Conexão com Serviços de API em Quarkus;
 
 ## Development server
 
