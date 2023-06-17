@@ -1,0 +1,21 @@
+.lista-pessoa {
+    position: absolute;
+    left: 0%;
+    width: 80%;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    width: 120px;
+    /* Defina a largura desejada para os rótulos */
+    margin-right: 10px;
+}
+
+.form-field input {
+    flex: 1;
+}

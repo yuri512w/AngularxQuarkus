@@ -1,0 +1,46 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.custom-button {
+    background-color: preto;
+    color: branco;
+}
+
+.branca {
+    background-color: rgb(41, 131, 68);
+    color: white;
+}
+
+.cinza {
+    background-color: gray;
+    color: white;
+}
+
+table {
+    width: 500px;
+}
+
+.mdc-menu-surface.mat-mdc-select-panel {
+    position: relative;
+    padding: 8px 0;
+    bottom: 340px;
+    background: white;
+    border-bottom-color: black;
+}
+
+.lista-pessoa {
+    position: absolute;
+    left: 0%;
+    width: 80%;
+}
+
+.form-wrapper {
+    position: absolute;
+    left: 50px;
+}
+
+.mat-mdc-dialog-surface ::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width: 20%;
+}

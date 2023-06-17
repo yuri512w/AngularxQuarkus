@@ -1,0 +1,13 @@
+<mat-toolbar class="header">
+    <div class="menu-container">
+        <mat-form-field appearance="fill" class="menu-field">
+            <mat-select placeholder="Opções" class="menu" (selectionChange)="onOptionSelected($event.value)">
+                <mat-option value="pessoa" style="background-color: rgb(95, 160, 212);">Pessoa</mat-option>
+                <mat-option value="produto" style="background-color: rgb(95, 160, 212);">Produto</mat-option>
+            </mat-select>
+
+
+        </mat-form-field>
+    </div>
+
+</mat-toolbar>

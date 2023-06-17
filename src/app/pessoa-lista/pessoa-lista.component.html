@@ -1,0 +1,41 @@
+<nav class="lista-pessoa">
+    <h1>
+        Lista de Pessoas</h1>
+
+    <table mat-table class="mat-elevation-z8">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container>
+                <tr *ngFor="let pessoa of pessoas.slice(currentPage * 5, (currentPage * 5) + 5); let i=index ">
+
+
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.sobrenome }}</td>
+                    <td>{{ pessoa.cpf }}</td>
+                    <td>
+                        <button mat-raised-button color="primary" class="edit-button" (click)="editarPessoa(pessoa) "><mat-icon >edit</mat-icon></button>
+                        <button mat-raised-button color="warn" (click)="excluirPessoa(pessoa) "><mat-icon >delete</mat-icon></button>
+                        <p style="display: none; ">{{ pessoa.id }}</p>
+
+                    </td>
+                </tr>
+
+            </ng-container>
+
+        </tbody>
+
+        <mat-paginator [length]="pessoas.length" [pageSize]="5" [pageSizeOptions]="[5]" (page)="currentPage = $event.pageIndex" aria-label="Selecionar">
+        </mat-paginator>
+
+        <button mat-raised-button color="primary" (click)="openCadastroForm()">Adicione</button>
+
+
+    </table>
+</nav>
