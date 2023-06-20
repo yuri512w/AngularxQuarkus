@@ -14,16 +14,13 @@
         <tbody>
             <ng-container>
                 <tr *ngFor="let pessoa of pessoas.slice(currentPage * 5, (currentPage * 5) + 5); let i=index ">
-
-
                     <td>{{ pessoa.nome }}</td>
                     <td>{{ pessoa.sobrenome }}</td>
                     <td>{{ pessoa.cpf }}</td>
                     <td>
-                        <button mat-raised-button color="primary" class="edit-button" (click)="editarPessoa(pessoa) "><mat-icon >edit</mat-icon></button>
-                        <button mat-raised-button color="warn" (click)="excluirPessoa(pessoa) "><mat-icon >delete</mat-icon></button>
+                        <button mat-raised-button color="primary" class="edit-button" (click)="editarPessoa(pessoa) "><mat-icon>edit</mat-icon></button>
+                        <button mat-raised-button color="warn" (click)="excluirPessoa(pessoa) "><mat-icon>delete</mat-icon></button>
                         <p style="display: none; ">{{ pessoa.id }}</p>
-
                     </td>
                 </tr>
 
