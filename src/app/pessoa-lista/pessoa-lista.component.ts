@@ -24,7 +24,7 @@ export class PessoaListaComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private dialog: MatDialog
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.carregarPessoas();
@@ -54,25 +54,26 @@ export class PessoaListaComponent implements OnInit {
 
   editarPessoa(pessoa: any): void {
     const confirmar = confirm('Deseja alterar os valores desta pessoa?');
-  
+
     if (confirmar) {
       const dialogRef = this.dialog.open(PessoaEditarComponent, {
         data: { pessoa: pessoa },
         panelClass: 'edit-dialog'
       });
-  
+
       dialogRef.afterClosed().subscribe((novoPessoa: any) => {
         if (novoPessoa) {
           // Enviar requisição PUT ou PATCH para a API com os novos valores
           // ...
+          this.carregarPessoas();
         }
       });
+
     }
   }
-  
+
   excluirPessoa(pessoa: any): void {
     const confirmar = confirm('Deseja excluir esta pessoa?');
-
     if (confirmar) {
       this.http.delete(`http://localhost:8080/pessoas/${pessoa.id}`).subscribe(
         () => {
